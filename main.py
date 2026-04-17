@@ -146,7 +146,7 @@ def run_scraper():
     # Tady zavolej svou hlavní funkci scraperu
     # Například: 
     # result = tvoje_hlavni_funkce()
-    return "Scraper dokončen!", 200
+    return "Scraper z GitHub dokončen!", 200
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))

@@ -1,0 +1,13 @@
+*.json
+.cache/
+.codeoss/
+.config/
+.docker/
+.gemini/
+.local/
+.npm/
+.vscode/
+.bash_history
+.bash_logout
+.bashrc
+.profile

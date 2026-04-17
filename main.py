@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 import datetime
 import time
 import re
+import os
+from flask import Flask
 
 PROJECT_ID = 'scraping-ak-drnovice'
 DATASET_ID = 'treninkovy_plan'
@@ -136,3 +138,15 @@ def scrape_treninkovy_plan(request):
         return f"Doplněno {len(new_links)} nových plánů s číslováním dnů.", 200
     except Exception as e:
         return f"Chyba: {str(e)}", 500
+
+app = Flask(__name__)
+
+@app.route("/")
+def run_scraper():
+    # Tady zavolej svou hlavní funkci scraperu
+    # Například: 
+    # result = tvoje_hlavni_funkce()
+    return "Scraper dokončen!", 200
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
